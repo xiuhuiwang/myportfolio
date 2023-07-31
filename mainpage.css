@@ -1,0 +1,17 @@
+section {
+    min-height: 100vh;
+    
+}
+
+.mainpage_ctn {
+    padding-top: 5vh;
+}
+
+
+#name {
+    color: rgba(3, 118, 3, 0.989)
+}
+
+.company_logo {
+    height: 40px;
+}
