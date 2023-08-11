@@ -21,7 +21,7 @@
 	<header class="py-3 border-bottom" style="background-color: #e3f2fd;">
 		<div class="d-flex flex-wrap justify-content-center container">
 			<a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-			<svg class="bi" width="40" height="32"> <img src="./images/logo.png" alt="logo" width="40" class="me-3"></svg>
+			<svg class="bi" width="40" height="32"> <img src="public/images/logo.png" alt="logo" width="40" class="me-3"></svg>
 			<span class="fs-4 text-body-secondary">Xiuhui Wang</span>
 			</a>
 
@@ -44,7 +44,7 @@
 					<p>Intricate pineapple galaxy rainbow shimmering labyrinth serene breeze whispering moonlight enigmatic cascade serendipity meandering wonderland ephemeral twilight tranquility</p>
 				</div>
 				<div class="col">
-					<img src="images/IMG_6888.jpg" alt="Xiuhui's photo" class="img-fluid">
+					<img src="public/images/IMG_6888.jpg" alt="Xiuhui's photo" class="img-fluid">
 				</div>
 			</div>
 		</div>
@@ -54,12 +54,14 @@
 	<section id="section-about">
 		<div class="container mainpage_ctn" style="height: 100vh;" id="about">
 			<div class="row">
-				<h2>About</h2>
+				<div class="col d-flex justify-content-center">
+					<h1 class="bg-success w-50 text-center text-white lh-lg rounded-pill">About</h1>
+				</div>
 			</div>
 			<div class="row">
 				<div class="bg-light w-75 mx-auto p-0 border border-secondary-subtle shadow">
 					<div class="px-4 py-3 d-flex justify-content-between align-items-center">
-						<img src="images/svcsa.png" alt="svcsa logo" class="company_logo">
+						<img src="public/images/svcsa.png" alt="svcsa logo" class="company_logo">
 						<span class="fs-5"><a href="http://www.svcsa.org/" target="_blank" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Silicon Valley Chinese Sports Association</a></span>
 						<span class="fs-5">Software Engineering Intern</span>
 					</div>
@@ -84,10 +86,50 @@
 	</section>
 
 	<!-- portfolio page-->
-	<section id="section-portfolio" style="background-color: aquamarine;">
+	<section id="section-portfolio" style="background-color: rgb(229, 249, 221);">
 		<div class="container mainpage_ctn" style="height: 100vh;" id="portfolio">
 			<div class="row">
-				<div class="col"><h2>Portfolio</h2></div>
+				<div class="col d-flex justify-content-center">
+					<h1 class="bg-success w-50 text-center text-white lh-lg rounded-pill">Portfolio</h1>
+				</div>
+			</div>
+			<!-- projects -->
+			<div class="container">
+				<div class="row align-content-center">
+					<div class="col-md-4 p-3">
+						<div class="bg-white project">
+							<div class="portfolio-img">
+								<img src="public/images/portfolio/svcsa_portfolio.png" alt="svcsa project" class="img-fluid portfolio-img">
+							</div>
+							<div class="portfolio-text p-3 mt-1">
+								<h5 class="text-success">SVCSA Website</h5>
+								<p>A sports website for displaying match information and player sign-up.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 p-3">
+						<div class="bg-white project">
+							<div class="portfolio-img">
+								<img src="public/images/portfolio/DFS-portfolio.jpg" alt="DFS & MapReduce project" class="img-fluid portfolio-img">
+							</div>
+							<div class="portfolio-text p-3 mt-1">
+								<h5 class="text-success">HDFS & MapReduce</h5>
+								<p>Distributed file system with MapReduce computation Engine.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 p-3">
+						<div class="bg-white project">
+							<div class="portfolio-img"> 
+								<img src="public/images/portfolio/expedia-portfolio.png" alt="svcsa project" class="img-fluid portfolio-img">
+							</div>
+							<div class="portfolio-text p-3  mt-1">
+								<h5 class="text-success">Expedia Website</h5>
+								<p>Lite Expedia clone, where users can register, search, like, review hotels.</p>
+							</div>
+						</div>
+					</div>	
+				</div>
 			</div>
 		</div>
 	</section>
@@ -95,8 +137,25 @@
 	<!-- contact page -->
 	<section id="section-contact">
 		<div class="container mainpage_ctn" style="height: 100vh;" id="contact">
-			<div class="row">
-				<div class="col"><h2>Contact</h2></div>
+			<div class="row d-flex justify-content-center p-5">
+				<div class="col bg-success w-75 rounded">
+					<h2 class="text-center text-white">Contact</h2>
+					<p class="text-white">Have a question or want to work together?</p>
+					<form action="" method="post">
+						<div class="form-group">
+							<label for="name" class="text-white">Name</label>
+							<input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+						</div>
+						<div class="form-group">
+							<label for="email" class="text-white">Email</label>
+							<input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+						</div>
+						<div class="form-group">
+							<label for="message" class="text-white">Message</label>
+							<textarea class="form-control" id="message" name="message" rows="3" placeholder="Enter your message"></textarea>
+						</div>
+						<button type="submit" class="btn btn-light">Submit</button>
+				</div>
 			</div>
 		</div>
 	</section>

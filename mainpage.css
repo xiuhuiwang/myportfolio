@@ -10,17 +10,10 @@ section {
     height: 40px;
 }
 
-/* STICKY NAVIGATION */
-/* .sticky header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding-top: 0;
-    padding-bottom: 0;
-    background-color: rgba(255, 255, 255, 0.96);
-    z-index: 999;
-    box-shadow: 0 1.2rem 3.2 rgba(0, 0, 0, 0.03);
-  }
-  .sticky section{
-        padding-top: 20vh;
-  } */
+.portfolio-img {
+    height: 200px;
+}
+
+/* .project:hover {
+    transform: translateY(-1.2rem);
+} */

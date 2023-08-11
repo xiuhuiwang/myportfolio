@@ -42,3 +42,10 @@ allLinks.forEach((link) => {
       headerEl.classList.toggle("nav-open");
   });
 });
+
+//  hover on project, add shadow 
+$(".project").hover(function(){
+    $(this).addClass("shadow");
+}, function(){
+    $(this).removeClass("shadow");
+});
