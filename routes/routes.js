@@ -11,7 +11,6 @@ module.exports = function(app) {
 
     // for home page
     app.get('/', function (req, res){
-        console.log(__dirname);
         res.sendFile('main.html', {root: __dirname + '/../public/pages'});
     }),
     
