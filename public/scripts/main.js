@@ -82,3 +82,20 @@ $("#contact-form").on("submit", async function(event){
         alert("Oops! Message failed to send:( Please try again.");
     }
 });
+
+let app = angular.module('myApp', []);
+app.controller('appCtrl', ['$scope', '$http',function($scope, $http){
+    $http({
+        method: 'GET',
+        url: "/configdata"
+    }).then(
+        function success(response){
+            $scope.app_name = response.data.app_name;
+            $scope.date = response.data.date;
+        },
+        function error(err){
+            console.log('Error: ' + err);
+        }
+    );
+
+}]);
