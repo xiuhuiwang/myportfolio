@@ -22,7 +22,7 @@ const obs = new IntersectionObserver(
 obs.observe(sectionHeroEl);
 
 // Smooth scrolling animation
-const allLinks = document.querySelectorAll("a:link");
+const allLinks = document.querySelectorAll(".mynavlink:link");
 allLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
@@ -83,6 +83,7 @@ $("#contact-form").on("submit", async function(event){
     }
 });
 
+// use AngularJS to fetch app name and date from server
 let app = angular.module('myApp', []);
 app.controller('appCtrl', ['$scope', '$http',function($scope, $http){
     $http({

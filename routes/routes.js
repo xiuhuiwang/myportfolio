@@ -40,11 +40,30 @@ module.exports = function(app) {
         
     });
 
+    // for client js to fetch config data and date to pupolute the header and the footer
     app.get('/configdata', function (req, res){
         const data = {
             app_name: config.app_name,
             date: new Date().toLocaleDateString()
         };
         res.status(200).json(data);
+    });
+
+    // for resume download
+    app.get('/resume', function(req, res){
+        const filePath = `${__dirname}/../public/assets/Luna_Wang_Resume.pdf`;
+
+        res.setHeader('Content-disposition', 'attachment; filename=Luna_Wang_Resume.pdf');
+        res.setHeader('Content-type', 'application/pdf');
+        res.status(200);
+
+        res.download(filePath, 'Luna_Wang_Resume.pdf', function(err) {
+            if (err) {
+                // Handle the error, if any
+                console.error('Error sending file:', err);
+            } else {
+                console.log('File sent successfully');
+            }
+        });
     });
 };
