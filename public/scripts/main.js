@@ -49,3 +49,36 @@ $(".project").hover(function(){
 }, function(){
     $(this).removeClass("shadow");
 });
+
+// customize form function
+$("#contact-form").on("submit", async function(event){
+    event.preventDefault();
+
+    // Get form input values
+    const name = $("#visiter-name").val();
+    const email = $("#email").val();
+    const message = $("#message").val();
+
+    // Send a POST request to the server
+    const response = await fetch("/contact", {
+        method: 'POST',
+        body: JSON.stringify({
+            name: name,
+            email: email,
+            message: message
+        }),
+        
+        headers: {
+            'Content-Type': 'application/json' // Specify the content type here
+        }
+    });
+    
+    // if the response is successful, show a success message
+    const result = await response.json();
+    if (result.success) {
+        alert("Thanks for connecting! I will get back to you soon.");
+        this.reset();
+    } else {    
+        alert("Oops! Message failed to send:( Please try again.");
+    }
+});
