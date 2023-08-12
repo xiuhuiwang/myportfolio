@@ -57,7 +57,11 @@ function formSubmit(req, res){
         connectDB(false);
         // send a response to the client
         res.status(200).json({ success: true });
+    }).catch(error => {
+        console.error("Error saving message to the database:", error);
+        connectDB(false);
+        // send an error response to the client
+        res.status(500).json({ success: false, error: "Database error" });
     });
-
     
 }
