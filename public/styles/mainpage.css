@@ -37,7 +37,17 @@ header {
     color: #fff;
 }
 #hero-resume-button:hover {
-    background: #027e5d;;
+    background: #027e5d;
+}
+
+#hero-email-button {
+    text-decoration: none;
+    background-color: #cee57a;
+    color: #014a37;
+}
+
+#hero-email-button:hover {
+    background: #ebf1ce;
 }
 
 .page-heading {
@@ -64,4 +74,13 @@ header {
 
 #award_div {
     background-color: #e5e5e3;
+}
+
+.portfolio_link {
+    text-decoration: none;
+    color: #014a37;;
+}
+.portfolio_link:hover {
+    color: #498a73;
+    cursor: pointer;
 }
