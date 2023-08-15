@@ -1,6 +1,7 @@
 /*
     Please note that this web application is a single page application (SPA).
-    The server only has one route for the home page, and one for form submission.
+    The server only has one route for the home page, and one for form submission,
+    one for resume download, and one for fetching config data.
     All other routes are handled by the client-side JavaScript code. 
 */
 const config = require('../modules/config.js');

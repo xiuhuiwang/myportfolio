@@ -20,31 +20,33 @@
 </head>
 <body data-ng-app='myApp'>
 	<!-- header -->
-	<header class="py-3 border-bottom" style="background-color: #e3f2fd;" data-ng-controller="appCtrl">
+	<header class="py-3" data-ng-controller="appCtrl">
 		<div class="d-flex flex-wrap justify-content-center container">
 			<a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
 			<svg class="bi" width="40" height="32"> <img src="../images/logo.png" alt="logo" width="40" class="me-3"></svg>
-			<span class="fs-4 text-body-secondary">{{app_name}}</span>
+			<span class="fs-3" id="app_name">{{app_name}}</span>
 			</a>
 
-			<ul class="nav nav-pills me-3">
-			<li class="nav-item"><a href="#" class="nav-link mynavlink" aria-current="page">Home</a></li>
-			<li class="nav-item"><a href="#section-about" class="nav-link mynavlink">About</a></li>
-			<li class="nav-item"><a href="#section-portfolio" class="nav-link mynavlink">Portfolio</a></li>
-			<li class="nav-item"><a href="#section-contact" class="nav-link mynavlink">Contact</a></li>
-			<li class="nav-item"><a href="/resume" class="nav-link">Download My Resume</a></li>
+			<ul class="nav nav-pills">
+			<li class="nav-item"><a href="#" class="nav-link mynavlink fs-4 mx-3" aria-current="page">Home</a></li>
+			<li class="nav-item"><a href="#section-about" class="nav-link mynavlink fs-4 mx-3">About</a></li>
+			<li class="nav-item"><a href="#section-portfolio" class="nav-link mynavlink fs-4 mx-3">Portfolio</a></li>
+			<li class="nav-item"><a href="#section-award" class="nav-link mynavlink fs-4 mx-3">Award</a></li>
+			<li class="nav-item"><a href="#section-contact" class="nav-link mynavlink fs-4 mx-3">Contact</a></li>
+			<!-- <li class="nav-item"><a href="/resume" class="nav-link fs-4 mx-3">Download Resume</a></li> -->
 			</ul>
 		</div>
   	</header>
   
 	<!-- Introduction Page --> 
 	<section id="section-hero" class="pt-5">
-		<div class="container mainpage_ctn" id="homepage">
+		<div class="container mainpage_ctn mt-5 pt-5" id="homepage">
 			<div class="row align-items-center">
 				<div class="col px-5">
-					<h3 class="py-3">Hi, I'm <span id="name">Xiuhui Wang</span>.</h3>
-					<h5 class="pb-5">I'm a full-stack web developer.</h5>
-					<p>Intricate pineapple galaxy rainbow shimmering labyrinth serene breeze whispering moonlight enigmatic cascade serendipity meandering wonderland ephemeral twilight tranquility</p>
+					<h3 class="py-3 fs-1">Hi, I'm <span id="name">Xiuhui Wang</span>.</h3>
+					<h5 class="pb-5 fs-2">I'm a full-stack web developer.</h5>
+					<p class="fs-4 pb-3">A self-starter and a life-long-learner who writes clean, elegant and efficient code.</p>
+					<p class="mt-5"><a class="rounded-3 py-3 px-5 fs-4" id="hero-resume-button" href="/resume">Download My Resume</a></p>
 				</div>
 				<div class="col">
 					<img src="../images/IMG_6888.jpg" alt="Xiuhui's photo" class="img-fluid">
@@ -58,18 +60,18 @@
 		<div class="container mainpage_ctn" id="about">
 			<div class="row">
 				<div class="col d-flex justify-content-center mb-4">
-					<h1 class="bg-success w-50 text-center text-white lh-lg rounded-pill ">About</h1>
+					<h1 class="display-2 page-heading"><strong>About</strong></h1>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row mb-5">
 				<div class="bg-light w-75 mx-auto p-0 border border-secondary-subtle shadow">
 					<div class="px-4 py-3 d-flex justify-content-between align-items-center">
-						<img src="../images/svcsa.png" alt="svcsa logo" class="company_logo">
-						<span class="fs-5"><a href="http://www.svcsa.org/" target="_blank" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Silicon Valley Chinese Sports Association</a></span>
+						<img src="../images/experience/svcsa.png" alt="svcsa logo" class="company_logo">
+						<span class="fs-5"><a href="http://www.svcsa.org/" target="_blank" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover company-name">Silicon Valley Chinese Sports Association</a></span>
 						<span class="fs-5">Software Engineering Intern</span>
 					</div>
 					<hr class="mt-0 mx-2"/>
-					<!-- <div class="px-4 py-2 ">可以写技术栈</div> -->
+					<!-- <div class="px-4 py-2 ">skill stack</div> -->
 					<div class="px-4">
 						<ul>
 							<li>Developed an online registration module for a sport competition website, used by 300+ athletes and 30+ teams this season, reducing manual intervention by 70%, using HTML, JavaScript, PHP.</li>
@@ -81,19 +83,60 @@
 					<div class="px-4 py-3 bg-body-secondary text-dark-emphasis">
 						Jan 2023 - Present | Bay Area, CA
 					</div>
-				</div>
-				
+				</div>	
 			</div>
-			
+			<div class="row mb-5">
+				<div class="bg-light w-75 mx-auto p-0 border border-secondary-subtle shadow">
+					<div class="px-4 py-3 d-flex justify-content-between align-items-center">
+						<img src="../images/Experience/energy_china.png" alt="energy china logo" class="company_logo">
+						<span class="fs-5"><a href="http://en.ceec.net.cn" target="_blank" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover company-name">China Energy Engineering Corporation</a></span>
+						<span class="fs-5">Software and Hardware Engineer</span>
+					</div>
+					<hr class="mt-0 mx-2"/>
+					<!-- <div class="px-4 py-2 ">skill stack</div> -->
+					<div class="px-4">
+						<ul>
+							<li><strong>Software:</strong> redesigned a file management system for 500+ users within the company, using Visual Basic. Managed core Oracle databases storing 60% of the company’s projects. </li>
+							<li><strong>Hardware: </strong>maintained 10 physical servers and 100+ virtual machines on VMware, including procurement, installation, networking, security, and backup, which are used by 500+ engineers. </li>
+						</ul>	
+					</div>
+					
+					<div class="px-4 py-3 bg-body-secondary text-dark-emphasis">
+						Mar 2014 - July 2022 | Bay Area, CA
+					</div>
+				</div>	
+			</div>
+			<div class="row mb-5">
+				<div class="bg-light w-75 mx-auto p-0 border border-secondary-subtle shadow">
+					<div class="px-4 py-3 d-flex justify-content-between align-items-center">
+						<img src="../images/Experience/usflogo.png" alt="USF logo" class="company_logo">
+						<span class="fs-5"><a href="https://www.usfca.edu" target="_blank" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover company-name">University of San Francisco</a></span>
+						<span class="fs-5">Teaching Assistant and Research Assistant</span>
+					</div>
+					<hr class="mt-0 mx-2"/>
+					<!-- <div class="px-4 py-2 ">skill stack</div> -->
+					<div class="px-4">
+						<ul>
+							<li>Assisted in lab courses, providing guidance, demonstrations, and assisting with experimental setups. </li>
+							<li>Utilized Python, Numpy and Plotly to visualize experimental data for analysis.</li>
+							<li>Employed NS3 simulation tool to model and simulate network environments for research purposes.</li>
+						</ul>	
+					</div>
+					
+					<div class="px-4 py-3 bg-body-secondary text-dark-emphasis">
+						Mar 2014 - July 2022 | Bay Area, CA
+					</div>
+				</div>	
+			</div>
 		</div>
 	</section>
 
 	<!-- portfolio page-->
-	<section id="section-portfolio" style="background-color: rgb(229, 249, 221);">
+	<section id="section-portfolio">
 		<div class="container mainpage_ctn"  id="portfolio">
 			<div class="row">
 				<div class="col d-flex justify-content-center">
-					<h1 class="bg-success w-50 text-center text-white lh-lg rounded-pill">Portfolio</h1>
+					<h1 class="display-2 page-heading"><strong>Portfolio</strong></h1>
 				</div>
 			</div>
 			<!-- projects -->
@@ -123,15 +166,34 @@
 					</div>
 					<div class="col-md-4 p-3">
 						<div class="bg-white project">
-							<div class="portfolio-img"> 
-								<img src="../images/portfolio/expedia-portfolio.png" alt="svcsa project" class="img-fluid portfolio-img">
-							</div>
-							<div class="portfolio-text p-3  mt-1">
-								<h5 class="text-success">Expedia Website</h5>
-								<p>Lite Expedia clone, where users can register, search, like, review hotels.</p>
-							</div>
+								<div class="portfolio-img"> 
+									<img src="../images/portfolio/expedia-portfolio.png" alt="svcsa project" class="img-fluid portfolio-img">
+								</div>
+								<div class="portfolio-text p-3  mt-1">
+									<h5 class="text-success">Expedia Website</h5>
+									<p>Lite Expedia clone, where users can register, search, like, review hotels.</p>
+								</div>
 						</div>
 					</div>	
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Award Page -->
+	<section id="section-award">
+		<div class="container mainpage_ctn"  id="award">
+			<div class="row">
+				<div class="col d-flex justify-content-center mb-4">
+					<h1 class="display-2 page-heading"><strong>Award</strong></h1>
+				</div>
+				<div class="row rounded-circle" id="award_div">
+					<div class="col-2"></div>
+					<div class="col-8 mx-auto">
+						<P class="my-5 fs-3">Newmark Women in Tech Grad Scholarship <span class="award_year">2023</span></P>
+						<P class="my-5 fs-3">Grace Hopper Conference Scholarship  <span class="award_year">2023</span></P>
+						<P class="my-5 fs-3">USF MSCS Program Scholarship  <span class="award_year">2022</span></P>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -141,7 +203,7 @@
 	<section id="section-contact">
 		<div class="container mainpage_ctn" id="contact">
 			<div class="row d-flex justify-content-center p-5">
-				<div class="col bg-success w-75 rounded">
+				<div class="col w-75 rounded" id="mycontact">
 					<h1 class="text-center text-white my-4">Contact</h1>
 					<p class="text-white m-3 fs-4">Have a question or want to work together?</p>
 					<form action="/contact" method="post" id="contact-form">

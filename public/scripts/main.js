@@ -4,11 +4,9 @@ const obs = new IntersectionObserver(
     function (entries) {
         const ent = entries[0];
         if (!ent.isIntersecting) {
-            // document.body.classList.add("sticky");
             document.getElementsByTagName("header")[0].classList.add("fixed-top");
             $("section").css("padding-top", "10vh");
         } else {
-            // document.body.classList.remove("sticky");
             document.getElementsByTagName("header")[0].classList.remove("fixed-top");
             
         }
@@ -38,7 +36,7 @@ allLinks.forEach((link) => {
     }
 
     // close mobile navigation
-    if (link.classList.contains("main-nav-link"))
+    if (link.classList.contains("nav-link"))
       headerEl.classList.toggle("nav-open");
   });
 });
