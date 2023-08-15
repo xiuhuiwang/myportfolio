@@ -17,3 +17,5 @@
     - Using config file to store server, port, and app name
     - Using plain JS to implement smooth scrolling animation of the SPA 
 
+- To Run, using: node app.js
+
